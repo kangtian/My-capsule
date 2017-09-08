@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CF16E1CC825899144791476 /* libPods-MapMobilesearchDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2AFAE4EB0707670A2B36C6 /* libPods-MapMobilesearchDemo.a */; };
+		984E76EB1F622AAD00BDC208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E76EA1F622AAD00BDC208 /* main.m */; };
+		984E76EE1F622AAE00BDC208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E76ED1F622AAE00BDC208 /* AppDelegate.m */; };
+		984E76F11F622AAE00BDC208 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E76F01F622AAE00BDC208 /* MapViewController.m */; };
+		984E76F41F622AAE00BDC208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E76F21F622AAE00BDC208 /* Main.storyboard */; };
+		984E76F61F622AAF00BDC208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984E76F51F622AAF00BDC208 /* Assets.xcassets */; };
+		984E76F91F622AAF00BDC208 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984E76F71F622AAF00BDC208 /* LaunchScreen.storyboard */; };
+		984E77041F62328700BDC208 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E77011F62328700BDC208 /* CustomCalloutView.m */; };
+		984E77051F62328700BDC208 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E77031F62328700BDC208 /* CustomAnnotationView.m */; };
+		984E77081F62441E00BDC208 /* CurrentLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E77071F62441E00BDC208 /* CurrentLocationAnnotation.m */; };
+		984E770F1F62746500BDC208 /* XYQProgressHUD+XYQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E770B1F62746500BDC208 /* XYQProgressHUD+XYQ.m */; };
+		984E77101F62746500BDC208 /* XYQProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 984E770C1F62746500BDC208 /* XYQProgressHUD.bundle */; };
+		984E77111F62746500BDC208 /* XYQProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E770E1F62746500BDC208 /* XYQProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0604EFDACE725EE56322DD4A /* Pods-MapMobilesearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMobilesearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapMobilesearchDemo/Pods-MapMobilesearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		21EC437979030483296227B5 /* Pods-MapMobilesearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMobilesearchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapMobilesearchDemo/Pods-MapMobilesearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		984E76E61F622AAD00BDC208 /* MapMobilesearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMobilesearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		984E76EA1F622AAD00BDC208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		984E76EC1F622AAE00BDC208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		984E76ED1F622AAE00BDC208 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		984E76EF1F622AAE00BDC208 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		984E76F01F622AAE00BDC208 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		984E76F31F622AAE00BDC208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		984E76F51F622AAF00BDC208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		984E76F81F622AAF00BDC208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		984E76FA1F622AAF00BDC208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984E77001F62328700BDC208 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		984E77011F62328700BDC208 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		984E77021F62328700BDC208 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		984E77031F62328700BDC208 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		984E77061F62441E00BDC208 /* CurrentLocationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationAnnotation.h; sourceTree = "<group>"; };
+		984E77071F62441E00BDC208 /* CurrentLocationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationAnnotation.m; sourceTree = "<group>"; };
+		984E770A1F62746500BDC208 /* XYQProgressHUD+XYQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYQProgressHUD+XYQ.h"; sourceTree = "<group>"; };
+		984E770B1F62746500BDC208 /* XYQProgressHUD+XYQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYQProgressHUD+XYQ.m"; sourceTree = "<group>"; };
+		984E770C1F62746500BDC208 /* XYQProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XYQProgressHUD.bundle; sourceTree = "<group>"; };
+		984E770D1F62746500BDC208 /* XYQProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYQProgressHUD.h; sourceTree = "<group>"; };
+		984E770E1F62746500BDC208 /* XYQProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYQProgressHUD.m; sourceTree = "<group>"; };
+		CC2AFAE4EB0707670A2B36C6 /* libPods-MapMobilesearchDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapMobilesearchDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		984E76E31F622AAD00BDC208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF16E1CC825899144791476 /* libPods-MapMobilesearchDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28F9C5CA7B11F095758E3637 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC2AFAE4EB0707670A2B36C6 /* libPods-MapMobilesearchDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6927CEC35772BE405CAD0D1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21EC437979030483296227B5 /* Pods-MapMobilesearchDemo.debug.xcconfig */,
+				0604EFDACE725EE56322DD4A /* Pods-MapMobilesearchDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		984E76DD1F622AAC00BDC208 = {
+			isa = PBXGroup;
+			children = (
+				984E76E81F622AAD00BDC208 /* MapMobilesearchDemo */,
+				984E76E71F622AAD00BDC208 /* Products */,
+				6927CEC35772BE405CAD0D1C /* Pods */,
+				28F9C5CA7B11F095758E3637 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		984E76E71F622AAD00BDC208 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984E76E61F622AAD00BDC208 /* MapMobilesearchDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		984E76E81F622AAD00BDC208 /* MapMobilesearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				984E77091F62746500BDC208 /* XYQProgressHUD */,
+				984E76EC1F622AAE00BDC208 /* AppDelegate.h */,
+				984E76ED1F622AAE00BDC208 /* AppDelegate.m */,
+				984E76EF1F622AAE00BDC208 /* MapViewController.h */,
+				984E76F01F622AAE00BDC208 /* MapViewController.m */,
+				984E77001F62328700BDC208 /* CustomCalloutView.h */,
+				984E77011F62328700BDC208 /* CustomCalloutView.m */,
+				984E77021F62328700BDC208 /* CustomAnnotationView.h */,
+				984E77031F62328700BDC208 /* CustomAnnotationView.m */,
+				984E77061F62441E00BDC208 /* CurrentLocationAnnotation.h */,
+				984E77071F62441E00BDC208 /* CurrentLocationAnnotation.m */,
+				984E76F21F622AAE00BDC208 /* Main.storyboard */,
+				984E76F51F622AAF00BDC208 /* Assets.xcassets */,
+				984E76F71F622AAF00BDC208 /* LaunchScreen.storyboard */,
+				984E76FA1F622AAF00BDC208 /* Info.plist */,
+				984E76E91F622AAD00BDC208 /* Supporting Files */,
+			);
+			path = MapMobilesearchDemo;
+			sourceTree = "<group>";
+		};
+		984E76E91F622AAD00BDC208 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				984E76EA1F622AAD00BDC208 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		984E77091F62746500BDC208 /* XYQProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				984E770A1F62746500BDC208 /* XYQProgressHUD+XYQ.h */,
+				984E770B1F62746500BDC208 /* XYQProgressHUD+XYQ.m */,
+				984E770C1F62746500BDC208 /* XYQProgressHUD.bundle */,
+				984E770D1F62746500BDC208 /* XYQProgressHUD.h */,
+				984E770E1F62746500BDC208 /* XYQProgressHUD.m */,
+			);
+			path = XYQProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		984E76E51F622AAD00BDC208 /* MapMobilesearchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984E76FD1F622AAF00BDC208 /* Build configuration list for PBXNativeTarget "MapMobilesearchDemo" */;
+			buildPhases = (
+				2466265662E0B49343A630A3 /* [CP] Check Pods Manifest.lock */,
+				984E76E21F622AAD00BDC208 /* Sources */,
+				984E76E31F622AAD00BDC208 /* Frameworks */,
+				984E76E41F622AAD00BDC208 /* Resources */,
+				F4BC236E54C6AD7032CF7AC2 /* [CP] Embed Pods Frameworks */,
+				DA06E9D021F16B6E688D1A86 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapMobilesearchDemo;
+			productName = MapMobilesearchDemo;
+			productReference = 984E76E61F622AAD00BDC208 /* MapMobilesearchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		984E76DE1F622AAC00BDC208 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = kangtian;
+				TargetAttributes = {
+					984E76E51F622AAD00BDC208 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 998BR65Y3R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 984E76E11F622AAC00BDC208 /* Build configuration list for PBXProject "MapMobilesearchDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 984E76DD1F622AAC00BDC208;
+			productRefGroup = 984E76E71F622AAD00BDC208 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				984E76E51F622AAD00BDC208 /* MapMobilesearchDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		984E76E41F622AAD00BDC208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984E76F91F622AAF00BDC208 /* LaunchScreen.storyboard in Resources */,
+				984E77101F62746500BDC208 /* XYQProgressHUD.bundle in Resources */,
+				984E76F61F622AAF00BDC208 /* Assets.xcassets in Resources */,
+				984E76F41F622AAE00BDC208 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2466265662E0B49343A630A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA06E9D021F16B6E688D1A86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapMobilesearchDemo/Pods-MapMobilesearchDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BC236E54C6AD7032CF7AC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapMobilesearchDemo/Pods-MapMobilesearchDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		984E76E21F622AAD00BDC208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984E77041F62328700BDC208 /* CustomCalloutView.m in Sources */,
+				984E76F11F622AAE00BDC208 /* MapViewController.m in Sources */,
+				984E770F1F62746500BDC208 /* XYQProgressHUD+XYQ.m in Sources */,
+				984E77111F62746500BDC208 /* XYQProgressHUD.m in Sources */,
+				984E77051F62328700BDC208 /* CustomAnnotationView.m in Sources */,
+				984E77081F62441E00BDC208 /* CurrentLocationAnnotation.m in Sources */,
+				984E76EE1F622AAE00BDC208 /* AppDelegate.m in Sources */,
+				984E76EB1F622AAD00BDC208 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		984E76F21F622AAE00BDC208 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984E76F31F622AAE00BDC208 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		984E76F71F622AAF00BDC208 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984E76F81F622AAF00BDC208 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		984E76FB1F622AAF00BDC208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		984E76FC1F622AAF00BDC208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		984E76FE1F622AAF00BDC208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21EC437979030483296227B5 /* Pods-MapMobilesearchDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 998BR65Y3R;
+				INFOPLIST_FILE = MapMobilesearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tk.MapMobilesearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		984E76FF1F622AAF00BDC208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0604EFDACE725EE56322DD4A /* Pods-MapMobilesearchDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 998BR65Y3R;
+				INFOPLIST_FILE = MapMobilesearchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tk.MapMobilesearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		984E76E11F622AAC00BDC208 /* Build configuration list for PBXProject "MapMobilesearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984E76FB1F622AAF00BDC208 /* Debug */,
+				984E76FC1F622AAF00BDC208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984E76FD1F622AAF00BDC208 /* Build configuration list for PBXNativeTarget "MapMobilesearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984E76FE1F622AAF00BDC208 /* Debug */,
+				984E76FF1F622AAF00BDC208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 984E76DE1F622AAC00BDC208 /* Project object */;
+}
