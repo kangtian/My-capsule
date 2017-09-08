@@ -20,6 +20,7 @@
 		984E770F1F62746500BDC208 /* XYQProgressHUD+XYQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E770B1F62746500BDC208 /* XYQProgressHUD+XYQ.m */; };
 		984E77101F62746500BDC208 /* XYQProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 984E770C1F62746500BDC208 /* XYQProgressHUD.bundle */; };
 		984E77111F62746500BDC208 /* XYQProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 984E770E1F62746500BDC208 /* XYQProgressHUD.m */; };
+		984E77131F6291C900BDC208 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 984E77121F6291C900BDC208 /* 3.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		984E770C1F62746500BDC208 /* XYQProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XYQProgressHUD.bundle; sourceTree = "<group>"; };
 		984E770D1F62746500BDC208 /* XYQProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYQProgressHUD.h; sourceTree = "<group>"; };
 		984E770E1F62746500BDC208 /* XYQProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYQProgressHUD.m; sourceTree = "<group>"; };
+		984E77121F6291C900BDC208 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
 		CC2AFAE4EB0707670A2B36C6 /* libPods-MapMobilesearchDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapMobilesearchDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		984E76E91F622AAD00BDC208 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				984E77121F6291C900BDC208 /* 3.gif */,
 				984E76EA1F622AAD00BDC208 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -205,6 +208,7 @@
 				984E77101F62746500BDC208 /* XYQProgressHUD.bundle in Resources */,
 				984E76F61F622AAF00BDC208 /* Assets.xcassets in Resources */,
 				984E76F41F622AAE00BDC208 /* Main.storyboard in Resources */,
+				984E77131F6291C900BDC208 /* 3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
