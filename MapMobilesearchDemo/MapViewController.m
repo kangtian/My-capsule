@@ -8,14 +8,12 @@
 
 #import "MapViewController.h"
 #import <MAMapKit/MAMapKit.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 
 // 自定义大头针 气泡
 #import "CustomAnnotationView.h"
 #import "CurrentLocationAnnotation.h"
 #import "XYQProgressHUD+XYQ.h"
-#define kAPIKey @"44825d12a2c375091746b93678b8f5c6"
 
 
 @interface MapViewController ()<MAMapViewDelegate,AMapSearchDelegate>
@@ -26,16 +24,17 @@
 // 搜索引擎
 @property (nonatomic, strong) AMapSearchAPI        *search;
 
-// 大头针
+// 自定义大头针
 @property (nonatomic, strong) UIImageView          *centerAnnotationView;
 // 防止重复点击
 @property (nonatomic, assign) BOOL                  isMapViewRegionChangedFromTableView;
-
+// 是否正在定位
 @property (nonatomic, assign) BOOL                  isLocated;
 
 // 定位
 @property (nonatomic, strong) UIButton             *locationBtn;
-// 跟踪模式对应图片
+
+// 用户自定义大头针
 @property (nonatomic, strong) UIImage              *imageLocated;
 @property (nonatomic, strong) UIImage              *imageNotLocate;
 
@@ -48,7 +47,7 @@
 // 当前类型下标
 @property (nonatomic, copy) NSArray                *searchTypes;
 
-// 数据源
+// 坐标数据源
 @property (nonatomic, strong) NSMutableArray *searchPoiArray;
 
 @end
@@ -58,7 +57,9 @@
 
 #pragma mark - Utility
 
-/* 根据中心点坐标来搜周边的POI. */
+/**
+ * @brief 根据中心点坐标来搜周边的POI.
+ */
 - (void)searchPoiWithCenterCoordinate:(CLLocationCoordinate2D )coord
 {
     AMapPOIAroundSearchRequest*request = [[AMapPOIAroundSearchRequest alloc] init];
@@ -72,6 +73,9 @@
     [self.search AMapPOIAroundSearch:request];
 }
 
+/**
+ * @brief 逆地址编码查询接口
+ */
 - (void)searchReGeocodeWithCoordinate:(CLLocationCoordinate2D)coordinate
 {
     AMapReGeocodeSearchRequest *regeo = [[AMapReGeocodeSearchRequest alloc] init];
@@ -84,7 +88,11 @@
 
 
 #pragma mark - MapViewDelegate
-
+/**
+ * @brief 地图区域改变完成后会调用此接口
+ * @param mapView 地图View
+ * @param animated 是否动画
+ */
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     // 防止重复点击
@@ -96,7 +104,12 @@
 }
 
 #pragma mark - userLocation
-
+/**
+ * @brief 当userTrackingMode改变时，调用此接口
+ * @param mapView 地图View
+ * @param mode 改变后的mode
+ * @param animated 动画
+ */
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
 {
     if(!updatingLocation)
@@ -118,6 +131,12 @@
     }
 }
 
+/**
+ * @brief 当userTrackingMode改变时，调用此接口
+ * @param mapView 地图View
+ * @param mode 改变后的mode
+ * @param animated 动画
+ */
 - (void)mapView:(MAMapView *)mapView  didChangeUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated
 {
     if (mode == MAUserTrackingModeNone)
@@ -130,13 +149,23 @@
     }
 }
 
+/**
+ * @brief 定位失败后，会调用此函数
+ * @param mapView 地图View
+ * @param error 错误号，参考CLError.h中定义的错误号
+ */
 - (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error
 {
     NSLog(@"error = %@",error);
 }
 
 
-
+/**
+ * @brief 根据anntation生成对应的View
+ * @param mapView 地图View
+ * @param annotation 指定的标注
+ * @return 生成的标注View
+ */
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
     
@@ -161,7 +190,11 @@
     return nil;
 }
 
-/* POI 搜索回调. */
+/**
+ * @brief POI查询回调函数
+ * @param request  发起的请求，具体字段参考 AMapPOISearchBaseRequest 及其子类。
+ * @param response 响应结果，具体字段参考 AMapPOISearchResponse 。
+ */
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
     [XYQProgressHUD hideHUD];
@@ -208,7 +241,6 @@
 
 
 #pragma mark - Handle Action
-
 - (void)actionSearchAroundAt:(CLLocationCoordinate2D)coordinate
 {
     [self searchReGeocodeWithCoordinate:coordinate];
@@ -244,7 +276,7 @@
 }
 
 #pragma mark - Initialization
-
+// 主视图
 - (void)initMapView
 {
     self.mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.view.bounds.size.height)];
@@ -260,9 +292,9 @@
     self.search.delegate = self;
 }
 
+// 自定义用户大头针
 - (void)initCenterView
 {
-    
     // 自己的坐标
     self.centerAnnotationView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homePage_wholeAnchor"]];
     self.centerAnnotationView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y - CGRectGetHeight(self.centerAnnotationView.bounds) / 2);
@@ -300,7 +332,6 @@
 {
     self.searchTypes = @[@"住宅", @"学校", @"楼宇", @"商场"];
     self.currentType = self.searchTypes.firstObject;
-    
     self.searchTypeSegment = [[UISegmentedControl alloc] initWithItems:self.searchTypes];
     self.searchTypeSegment.frame = CGRectMake(6, CGRectGetHeight(self.view.bounds) - 40, CGRectGetWidth(self.mapView.bounds) - 80, 32);
     self.searchTypeSegment.layer.cornerRadius = 3;
@@ -339,8 +370,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [AMapServices sharedServices].apiKey = kAPIKey;
     
     [self initSearch];
     [self initMapView];
